@@ -20,10 +20,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
 }
 
@@ -40,6 +44,7 @@ header {
 .menu a {
     color: #ffffff;
     text-decoration: none;
+    padding: 10px;
 }
 
 .menu a.active {
@@ -49,12 +54,12 @@ header {
 /* Hero sekce */
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px 80px;
     background: linear-gradient(135deg, #2a2a3d, #121225);
 }
 
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
@@ -69,13 +74,13 @@ header {
     border-radius: 5px;
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
-/* Sekce funkcí a ceníku */
-#features, .pricing, .contact {
+/* Sekce funkcí */
+#features {
     padding: 60px 20px;
-    background-color: #121225;
+    background-color: #1d1d2e;
 }
 
 .features-container {
@@ -87,68 +92,24 @@ header {
 
 .feature-item {
     background-color: #2a2a3d;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     width: 30%;
     min-width: 250px;
     text-align: center;
+    transition: transform 0.3s;
 }
 
-/* Ceníková tabulka */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ffffff;
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #2a2a3d;
-}
-
-/* Kontaktní formulář */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 15px;
-    background-color: #4a90e2;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    font-size: 1em;
-    cursor: pointer;
+.feature-item:hover {
+    transform: scale(1.05);
 }
 
 /* Patička */
 footer {
     background-color: #121225;
-    padding: 20px 30px;
+    padding: 30px 30px;
     text-align: center;
+    margin-top: 60px;
 }
 
 /* Responzivita */
@@ -162,7 +123,7 @@ footer {
         margin-bottom: 20px;
     }
     .hero h1 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
     .hero p {
         font-size: 1em;
@@ -176,16 +137,17 @@ footer {
 
 @media only screen and (max-width: 480px) {
     .hero h1 {
-        font-size: 1.5em;
+        font-size: 2em;
     }
     .hero p {
         font-size: 0.9em;
     }
     .btn-primary {
-        font-size: 0.9em;
+        font-size: 1em;
         padding: 10px 20px;
     }
     .feature-item {
-        width: 100%;
+        width: 90%;
     }
 }
+
