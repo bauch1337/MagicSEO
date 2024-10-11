@@ -1,0 +1,191 @@
+/* Základní stylování */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1d1d2e;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Navigace */
+header {
+    background-color: #121225;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu a.active {
+    border-bottom: 2px solid #4a90e2;
+}
+
+/* Hero sekce */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #2a2a3d, #121225);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+/* Sekce funkcí a ceníku */
+#features, .pricing, .contact {
+    padding: 60px 20px;
+    background-color: #121225;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background-color: #2a2a3d;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+}
+
+/* Ceníková tabulka */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ffffff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #2a2a3d;
+}
+
+/* Kontaktní formulář */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Patička */
+footer {
+    background-color: #121225;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+/* Responzivita */
+@media only screen and (max-width: 768px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    .hero p {
+        font-size: 0.9em;
+    }
+    .btn-primary {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+    .feature-item {
+        width: 100%;
+    }
+}
