@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MagicSEO - Ceník našich SEO služeb.">
-    <title>MagicSEO - Ceník</title>
+    <meta name="description" content="MagicSEO - Kontaktujte nás pro více informací o našich službách.">
+    <title>MagicSEO - Kontakt</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -15,40 +15,29 @@
             <ul class="menu">
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="features.html">Funkce</a></li>
-                <li><a href="pricing.html" class="active">Ceník</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="pricing.html">Ceník</a></li>
+                <li><a href="contact.html" class="active">Kontakt</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="pricing">
-            <h1>Ceník služeb</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Služba</th>
-                        <th>Cena</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><i class="fas fa-key fa-lg"></i> Analýza klíčových slov</td>
-                        <td>50 000 Kč</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-bug fa-lg"></i> Analýza technických chyb</td>
-                        <td>20 000 Kč</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-edit fa-lg"></i> Optimalizace obsahu</td>
-                        <td>40 000 Kč</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-search fa-lg"></i> Komplexní SEO audit</td>
-                        <td>100 000 Kč</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section class="contact">
+            <h1>Kontaktujte nás</h1>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> info@magicseo.cz</p>
+                <p><i class="fas fa-phone"></i> +420 123 456 789</p>
+            </div>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <label for="name">Jméno</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Zpráva</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit" class="btn-primary">Odeslat zprávu</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
