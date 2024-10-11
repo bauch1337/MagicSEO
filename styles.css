@@ -7,14 +7,15 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1d1d2e;
+    background-color: #0f0f1f;
     color: #ffffff;
+    line-height: 1.6;
 }
 
 /* Navigace */
 header {
-    background-color: #121225;
-    padding: 15px 30px;
+    background-color: #0a0a1a;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,92 +23,187 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 .menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+}
+
+.menu li {
+    display: inline;
 }
 
 .menu a {
     color: #ffffff;
     text-decoration: none;
-    padding: 8px 12px;
+    font-size: 1em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
+.menu a:hover,
 .menu a.active {
-    border-bottom: 2px solid #4a90e2;
+    background-color: #4a90e2;
 }
 
 /* Hero sekce */
 .hero {
     text-align: center;
-    padding: 150px 20px 100px;
-    background: linear-gradient(135deg, #2a2a3d, #121225);
+    padding: 200px 20px 100px;
+    background: linear-gradient(135deg, #1a1a2e, #0a0a1a);
+    margin-top: 60px;
 }
 
 .hero h1 {
-    font-size: 2.8em;
+    font-size: 3em;
     margin-bottom: 20px;
-    color: #4a90e2;
+    color: #a2c9ff;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-bottom: 30px;
+    color: #c2c2d6;
 }
 
 .btn-primary {
     background-color: #4a90e2;
     color: #ffffff;
-    padding: 12px 24px;
+    padding: 12px 30px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #357ac9;
 }
 
 /* Sekce funkcí a procesů */
-#features, #process {
-    background-color: #1d1d2e;
-    padding: 60px 20px;
+#features,
+#process {
+    background-color: #0f0f1f;
+    padding: 80px 20px;
     text-align: center;
 }
 
-.features-container, .process-container {
+#features h2,
+#process h2 {
+    font-size: 2.2em;
+    color: #a2c9ff;
+    margin-bottom: 40px;
+}
+
+.features-container,
+.process-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.feature-item, .process-item {
-    background-color: #2a2a3d;
-    border-radius: 8px;
-    padding: 20px;
-    width: 250px;
+.feature-item,
+.process-item {
+    background-color: #1a1a2e;
+    border-radius: 10px;
+    padding: 30px;
+    width: 280px;
     text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-item i, .process-item i {
+.feature-item:hover,
+.process-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.feature-item i,
+.process-item i {
     color: #4a90e2;
     margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+.feature-item h3,
+.process-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #a2c9ff;
+}
+
+.feature-item p,
+.process-item p {
+    font-size: 1em;
+    color: #c2c2d6;
 }
 
 /* Patička */
 footer {
-    background-color: #121225;
-    padding: 20px 30px;
+    background-color: #0a0a1a;
+    padding: 40px 50px;
     text-align: center;
-    margin-top: 40px;
+    color: #c2c2d6;
+    margin-top: 60px;
+    font-size: 0.9em;
 }
 
-/* Responzivní stylování */
+.footer-content nav a {
+    color: #c2c2d6;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-content nav a:hover {
+    color: #ffffff;
+}
+
+/* Responzivita */
 @media (max-width: 768px) {
-    .features-container, .process-container {
+    .menu {
         flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .features-container,
+    .process-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-item,
+    .process-item {
+        width: 80%;
+    }
+    .hero {
+        padding: 150px 20px 80px;
+    }
+    .hero h1 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .btn-primary {
+        font-size: 1em;
+        padding: 10px 20px;
     }
 }
