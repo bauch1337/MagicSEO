@@ -77,8 +77,8 @@ header {
     font-size: 1.2em;
 }
 
-/* Sekce funkcí */
-#features {
+/* Sekce funkcí a ceníku */
+#features, .pricing, .contact {
     padding: 60px 20px;
     background-color: #1d1d2e;
 }
@@ -102,6 +102,34 @@ header {
 
 .feature-item:hover {
     transform: scale(1.05);
+}
+
+/* Stylování pro ikony */
+.feature-item i, .features-details i, .contact-info i, table td i {
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+/* Uspořádání ikon a textu */
+.feature-item i {
+    margin-bottom: 15px;
+}
+.features-details li {
+    margin: 10px 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.features-details i {
+    margin-right: 10px;
+}
+.contact-info i {
+    margin-right: 8px;
+}
+
+/* Změna ikonových stylů v ceníku */
+table td i {
+    margin-right: 5px;
 }
 
 /* Patička */
@@ -150,4 +178,3 @@ footer {
         width: 90%;
     }
 }
-
